@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .inline-operations {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .form-actions input {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background: rgb(53, 53, 255);
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-actions input[type="reset"] {
+            background: gray;
+        }
+
+        .form-actions input:hover {
+            opacity: 0.9;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 7px;
+        }
+
+        .error:empty {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Registration Form</h1>
+        <form id="regForm" action="msg.html" method="get">
+
+            <div class="form-group">
+                <label for="Fn">First Name</label>
+                <input type="text" id="Fn" name="Fn" placeholder="Enter your First name">
+                <small id="FnError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="Mn">Middle Name</label>
+                <input type="text" id="Mn" name="Mn">
+                <small id="MnError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="Ln">Last Name</label>
+                <input type="text" id="Ln" name="Ln">
+                <small id="LnError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="Em">Email</label>
+                <input type="email" id="Em" name="Em" placeholder="Enter your Email address">
+                <small id="EmError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="Psw">Password</label>
+                <input type="password" id="Psw" name="Psw" placeholder="Enter your Password">
+                <small id="PswError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="Cpsw">Confirm Password</label>
+                <input type="password" id="Cpsw" name="Cpsw">
+                <small id="CpswError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="Mo">Mobile Number</label>
+                <input type="number" id="Mo" name="Mo" placeholder="Enter Mobile Number">
+                <small id="MoError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="DOB">Date Of Birth</label>
+                <input type="date" id="DOB" name="DOB">
+                <small id="DOBError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="inline-operations">
+                    <label><input type="radio" name="Gen" value="Male"> Male</label>
+                    <label><input type="radio" name="Gen" value="Female"> Female</label>
+                    <label><input type="radio" name="Gen" value="Others"> Others</label>
+                </div>
+                <small id="GenError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Hobby</label>
+                <div class="inline-operations">
+                    <label><input type="checkbox" name="Hobby" value="Singing">Singing</label>
+                    <label><input type="checkbox" name="Hobby" value="Dancing">Dancing</label>
+                    <label><input type="checkbox" name="Hobby" value="Travelling">Travelling</label>
+                    <label><input type="checkbox" name="Hobby" value="Any Other">Any Other</label>
+                </div>
+                <small id="HobbyError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="Add">Address</label>
+                <textarea id="Add" name="Add" rows="5" placeholder="Insert Address Here"></textarea>
+                <small id="AddError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="City">City</label>
+                <select id="City" name="City">
+                    <option value="">Select City</option>
+                    <option value="Ahmedabad">Ahmedabad</option>
+                    <option value="Amreli">Amreli</option>
+                    <option value="Anand">Anand</option>
+                    <option value="Bhanvad">Bhanvad</option>
+                    <option value="Bharuch">Bharuch</option>
+                    <option value="Bhavnagar">Bhavnagar</option>
+                    <option value="Bhuj">Bhuj</option>
+                    <option value="Botad">Botad</option>
+                    <option value="Dahod">Dahod</option>
+                    <option value="Deesa">Deesa</option>
+                    <option value="Gandhidham">Gandhidham</option>
+                    <option value="Gandhinagar">Gandhinagar</option>
+                    <option value="Godhra">Godhra</option>
+                    <option value="Gondal">Gondal</option>
+                    <option value="Jamnagar">Jamnagar</option>
+                    <option value="Junagadh">Junagadh</option>
+                    <option value="Kalol">Kalol</option>
+                    <option value="Mehsana">Mehsana</option>
+                    <option value="Morbi">Morbi</option>
+                    <option value="Nadiad">Nadiad</option>
+                    <option value="Navsari">Navsari</option>
+                    <option value="Palanpur">Palanpur</option>
+                    <option value="Patan">Patan</option>
+                    <option value="Porbandar">Porbandar</option>
+                    <option value="Rajkot">Rajkot</option>
+                    <option value="Surat">Surat</option>
+                    <option value="Surendranagar">Surendranagar</option>
+                    <option value="Vadodara (Baroda)">Vadodara (Baroda)</option>
+                    <option value="Valsad">Valsad</option>
+                    <option value="Vapi">Vapi</option>
+                    <option value="Veraval">Veraval</option>
+                    <option value="Other">Other</option>
+                </select>
+                <small id="CityError" class="error"></small>
+            </div>
+
+            <div class="form-actions">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("regForm").addEventListener("submit", function (event) {
+            let Fn = document.getElementById("Fn").value;
+            let FnError = document.getElementById("FnError");
+            let Mn = document.getElementById("Mn").value;
+            let MnError = document.getElementById("MnError");
+            let Ln = document.getElementById("Ln").value;
+            let LnError = document.getElementById("LnError");
+            let Em = document.getElementById("Em").value;
+            let EmError = document.getElementById("EmError");
+            let Psw = document.getElementById("Psw").value;
+            let PswError = document.getElementById("PswError");
+            let Cpsw = document.getElementById("Cpsw").value;
+            let CpswError = document.getElementById("CpswError");
+            let Mo = document.getElementById("Mo").value;
+            let MoError = document.getElementById("MoError");
+            let DOB = document.getElementById("DOB").value;
+            let DOBError = document.getElementById("DOBError");
+            let Gen = document.querySelector('input[name="Gen"]:checked');
+            let GenError = document.getElementById("GenError");
+            let Hobby = document.querySelector('input[name="Hobby"]:checked');
+            let HobbyError = document.getElementById("HobbyError");
+            let Add = document.getElementById("Add").value;
+            let AddError = document.getElementById("AddError");
+            let City = document.getElementById("City").value;
+            let CityError = document.getElementById("CityError");
+            let valid = true;
+
+            if (Fn === "") {
+                FnError.textContent = "Please Enter your First Name";
+                document.getElementById("Fn").focus();
+                valid = false;
+            } else {
+                FnError.textContent = "";
+            }
+
+            if (Mn === "") {
+                MnError.textContent = "Please Enter your Middle Name";
+                document.getElementById("Mn").focus();
+                valid = false;
+            } else {
+                MnError.textContent = "";
+            }
+
+            if (Ln === "") {
+                LnError.textContent = "Please Enter your Last Name";
+                document.getElementById("Ln").focus();
+                valid = false;
+            } else {
+                LnError.textContent = "";
+            }
+
+            if (Em === "") {
+                EmError.textContent = "Please Enter your E-Mail Address";
+                document.getElementById("Em").focus();
+                valid = false;
+            } else {
+                EmError.textContent = "";
+            }
+
+            if (Psw === "") {
+                PswError.textContent = "Please Enter your Password";
+                document.getElementById("Psw").focus();
+                valid = false;
+            } else if (Psw.length < 8) {
+                PswError.textContent = "Length of Password is at least 8 characters";
+                document.getElementById("Psw").focus();
+                valid = false;
+            } else if (Psw.length > 32) {
+                PswError.textContent = "Length of Password is at most 32 characters";
+                document.getElementById("Psw").focus();
+                valid = false;
+            } else {
+                PswError.textContent = "";
+            }
+
+            if (Cpsw === "") {
+                CpswError.textContent = "Please Enter your Confirm Password";
+                document.getElementById("Cpsw").focus();
+                valid = false;
+            } else if (Cpsw != Psw) {
+                CpswError.textContent = "Confirm Password and Password must be same!";
+                document.getElementById("Cpsw").focus();
+                valid = false;
+            } else {
+                CpswError.textContent = "";
+            }
+
+            if (Mo === "") {
+                MoError.textContent = "Please Enter Mobile Number";
+                document.getElementById("Mo").focus();
+                valid = false;
+            } else if (Mo.length != 10) {
+                MoError.textContent = "Mobile Number must contain 10 digits!";
+                document.getElementById("Mo").focus();
+                valid = false;
+            } else {
+                MoError.textContent = "";
+            }
+
+            if (DOB === "") {
+                DOBError.textContent = "Please select your date of birth";
+                document.getElementById("DOB").focus();
+                valid = false;
+            } else {
+                DOBError.textContent = "";
+            }
+
+            if (!Gen) {
+                GenError.textContent = "Please select your Gender";
+                document.querySelector('input[name="Gen"]').focus();
+                valid = false;
+            } else {
+                GenError.textContent = "";
+            }
+
+            if (!Hobby) {
+                HobbyError.textContent = "Please select your Hobby";
+                document.querySelector('input[name="Hobby"]').focus();
+                valid = false;
+            } else {
+                HobbyError.textContent = "";
+            }
+
+            if (Add === "") {
+                AddError.textContent = "Please Enter your Address";
+                document.getElementById("Add").focus();
+                valid = false;
+            } else {
+                AddError.textContent = "";
+            }
+
+            if (City === "") {
+                CityError.textContent = "Please select your City";
+                document.getElementById("City").focus();
+                valid = false;
+            } else {
+                CityError.textContent = "";
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
